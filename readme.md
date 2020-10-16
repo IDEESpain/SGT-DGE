@@ -5,6 +5,7 @@
 Este repositorio contiene
 
 - [Guía de publicación de datos geográficos enlazados dentro del marco de la IDEE](Guia.md)
+- [Decálogo para la publicación de datos geográficos en RDF](Decalogo.md)
 
 Todo el trabajo de este repositorio está licenciado bajo la licencia [Creative Commons Atribución 4.0 International][cc-by].
 
