@@ -96,6 +96,7 @@ Si se quiere indicar un SRS diferente al de por defecto, entonces hay que indica
   </tr>
 </table>
 
+No obstante, ten en cuenta también las restricciones que te pudiera imponer el software que utilices para la publicación. Así por ejemplo, si usas Virtuoso podría [no estar soportado el SRS directamente en el WKT](https://github.com/openlink/virtuoso-opensource/issues/455).
 
 ## 6. Reaprovecha geometrías ya publicadas
 
@@ -183,7 +184,7 @@ Si se desea incluir relaciones espaciales entre *Spatial Things*, se recomienda 
 
 Los predicados para las **topológicas** serán exactamente igual que como se citan, pero en el espacio de nombres [GeoSPARQL](http://www.opengis.net/ont/geosparql#) (prefijo "*geo:*" seguido de sf) Por ejemplo, se utilizará *[geo:sfIntersects](http://www.opengis.net/ont/geosparql#sfIntersects)*, *[geo:sfDisjoint](http://www.opengis.net/ont/geosparql#sfDisjoint)* ... Estas a su vez derivan de las relaciones espaciales previstas en la ontología *Simple Features*.
 
-Si se utiliza una tecnología de implementación que tiene propiedades propias, es recomendable generarlos también. Por ejemplo, si se utiliza [Virtuoso](http://docs.openlinksw.com/virtuoso/ch-functions/) es recomendable crear estas propiedades: *bif:st_intersects, bif:st_within y bif:st_contains.*
+Si se utiliza una tecnología de implementación que tiene propiedades propias, es recomendable generarlos también. Por ejemplo, si se utiliza [Virtuoso](http://docs.openlinksw.com/virtuoso/ch-functions/) en versiones antiguas, es recomendable crear estas propiedades: *bif:st_intersects, bif:st_within y bif:st_contains.* De todas formas, a partir de las versiones Virtuoso Enterprise Edition Release 8.2 y Virtuoso Open Source Edition Release 7.2.6 [ya se soporta el estándar GeoSPARQL](https://community.openlinksw.com/t/virtuoso-geosparql-demo-server/223) tras incluir [mejoras de soporte a la funcionalidad geoespacial](http://vos.openlinksw.com/owiki/wiki/VOS/VirtGeoSPARQLEnhancementDocs).
 
 En el estándar de GeoSPARQL se establecen otras propiedades que podrían ser de interés en algún caso específico (*externally connected, partially overlapping, covers*…)
 
